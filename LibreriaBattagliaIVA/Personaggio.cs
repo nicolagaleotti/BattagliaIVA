@@ -10,8 +10,8 @@ namespace LibreriaBattagliaIVA
     {
         public string Nome { get; private set; }
         public Razza Razza { get; private set; }
-        public uint Vita { get; private set; }
-        public uint Esperienza { get; private set; }
+        public uint Vita { get; private set; } = 100;
+        public uint Esperienza { get; private set; } = 1;
 
         public Personaggio(string nome, Razza razza)
         {
@@ -31,7 +31,15 @@ namespace LibreriaBattagliaIVA
 
         public bool Attacca(Personaggio personaggio)
         {
-            uint attacco = this.GetAttacco();
+            if (personaggio == this)
+            {
+                throw new Exception("Non puoi attaccare lo stesso personaggio!");
+            }
+            if(Razza.Squadra == personaggio.Razza.Squadra)
+            {
+                throw new Exception("Non puoi attaccare un personaggio della stessa squadra!");
+            }
+            uint attacco = GetAttacco();
             uint difesa = personaggio.GetDifesa();
             if (attacco - difesa > 0)
             {
@@ -47,6 +55,11 @@ namespace LibreriaBattagliaIVA
                 personaggio.Attacca(this);
                 return false;
             }
+        }
+
+        public override string ToString()
+        {
+            return ($"{Nome} [{Razza.GetType().Name}]\nVita : {Vita}\nEsperienza : {Esperienza}\nAttacco : {Razza.Attacco}\nDifesa : {Razza.Difesa}\n");
         }
     }
 }

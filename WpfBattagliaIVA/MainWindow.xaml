@@ -5,8 +5,116 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBattagliaIVA"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Battaglia IV A" Height="470" Width="1000">
     <Grid>
-        
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="3.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label Content="Nuovo Personaggio" FontSize="23" FontWeight="Bold" Foreground="Red"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label Content="Inserisci nome:" FontSize="20"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBox x:Name="txtNome" FontSize="20" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label Content="Seleziona Razza:" FontSize="20"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ComboBox Name="cmbRazza" FontSize="20" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="11" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Button x:Name="btnCrea" Content="Crea" FontSize="20" FontWeight="Bold" Width="100" BorderThickness="3,3,3,3"  BorderBrush="BlanchedAlmond"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="13" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ListBox x:Name="lbNuovoPersonaggio" FontSize="20" Width="280" Height="90" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="200"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label Content="Battaglia" FontSize="30" FontWeight="Bold" Foreground="Red"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label Content="Seleziona attaccante:" FontSize="23"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label Content="Seleziona difendente:" FontSize="23"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ComboBox Name="cmbAttaccante" Width="300" FontSize="23"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ComboBox Name="cmbDifendente" Width="300" FontSize="23"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Button Name="btnCombatti" Content="Combatti" Width="200" FontSize="23" FontWeight="Bold" BorderBrush="BlanchedAlmond" BorderThickness="3,3,3,3"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ListBox Name="lbBattaglia" Width="650" Height="200" FontSize="23"/>
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+                
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>

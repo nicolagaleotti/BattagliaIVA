@@ -11,11 +11,24 @@ namespace ConsoleBattagliaIVA
     {
         static void Main(string[] args)
         {
-            Personaggio p1 = new Personaggio("Mati", Uomini.Istanza);
+            try
+            {
+                Personaggio p1 = new Personaggio("Nicola", Uomini.Istanza);
+                Personaggio p2 = new Personaggio("Matilde", Stregoni.Istanza);
 
-            Personaggio p2 = new Personaggio("Mati", Elfi.Istanza);
+                Console.WriteLine(p1);
+                Console.WriteLine(p2);
 
-            Console.WriteLine(p1.Attacca(p2));
+                Console.WriteLine($"{p1.Nome} attacca {p2.Nome}");
+                Console.WriteLine($"{p1.Attacca(p2)}\n");
+
+                Console.WriteLine(p1);
+                Console.WriteLine(p2);
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             Console.ReadLine();
         }
     }
