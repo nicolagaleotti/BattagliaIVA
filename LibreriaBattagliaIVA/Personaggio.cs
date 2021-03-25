@@ -52,7 +52,6 @@ namespace LibreriaBattagliaIVA
             {
                 if (Esperienza < 10)
                     Esperienza++;
-                personaggio.Attacca(this);
                 return false;
             }
         }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBattagliaIVA"
         mc:Ignorable="d"
-        Title="Battaglia IV A" Height="470" Width="1000">
+        Title="La Battaglia della IV A" Height="470" Width="1000">
     <Grid>
         <StackPanel>
             <Grid>
@@ -42,7 +42,7 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBox x:Name="txtNome" FontSize="20" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBox x:Name="txtNome" FontSize="20" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -50,15 +50,15 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <ComboBox Name="cmbRazza" FontSize="20" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            <ComboBox Name="cmbRazza" FontSize="20" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center" Loaded="cmbRazza_Loaded"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="11" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button x:Name="btnCrea" Content="Crea" FontSize="20" FontWeight="Bold" Width="100" BorderThickness="3,3,3,3"  BorderBrush="BlanchedAlmond"/>
+                            <Button x:Name="btnCrea" Content="Crea" FontSize="20" FontWeight="Bold" Width="100" BorderThickness="3,3,3,3"  BorderBrush="BlanchedAlmond" Click="btnCrea_Click"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="13" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <ListBox x:Name="lbNuovoPersonaggio" FontSize="20" Width="280" Height="90" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            <ListBox x:Name="lbNuovoPersonaggio" FontSize="15" Width="280" Height="90" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
 
                     </Grid>
