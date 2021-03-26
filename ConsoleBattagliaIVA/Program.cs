@@ -14,7 +14,7 @@ namespace ConsoleBattagliaIVA
             try
             {
                 Personaggio p1 = new Personaggio("Nicola", Uomini.Istanza);
-                Personaggio p2 = new Personaggio("Matilde", Stregoni.Istanza);
+                Personaggio p2 = new Personaggio("Matilde", Orchi.Istanza);
 
                 Console.WriteLine(p1);
                 Console.WriteLine(p2);

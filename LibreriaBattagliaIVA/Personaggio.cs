@@ -41,7 +41,7 @@ namespace LibreriaBattagliaIVA
             }
             uint attacco = GetAttacco();
             uint difesa = personaggio.GetDifesa();
-            if (attacco - difesa > 0)
+            if (attacco > difesa)
             {
                 personaggio.Vita--;
                 if (Esperienza < 10)
@@ -50,8 +50,8 @@ namespace LibreriaBattagliaIVA
             }
             else
             {
-                if (Esperienza < 10)
-                    Esperienza++;
+                if (personaggio.Esperienza < 10)
+                    personaggio.Esperienza++;
                 return false;
             }
         }

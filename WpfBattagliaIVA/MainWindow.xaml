@@ -50,7 +50,7 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <ComboBox Name="cmbRazza" FontSize="20" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center" Loaded="cmbRazza_Loaded"/>
+                            <ComboBox Name="cmbRazza" FontSize="18" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center" Loaded="cmbRazza_Loaded"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="11" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -96,15 +96,15 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <ComboBox Name="cmbAttaccante" Width="300" FontSize="23"/>
+                            <ComboBox Name="cmbAttaccante" Width="300" FontSize="20"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <ComboBox Name="cmbDifendente" Width="300" FontSize="23"/>
+                            <ComboBox Name="cmbDifendente" Width="300" FontSize="20"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button Name="btnCombatti" Content="Combatti" Width="200" FontSize="23" FontWeight="Bold" BorderBrush="BlanchedAlmond" BorderThickness="3,3,3,3"/>
+                            <Button Name="btnCombatti" Content="Combatti" Width="200" FontSize="23" FontWeight="Bold" BorderBrush="BlanchedAlmond" BorderThickness="3,3,3,3" Click="btnCombatti_Click"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
